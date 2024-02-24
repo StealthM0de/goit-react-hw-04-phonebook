@@ -10,7 +10,7 @@ const initialContacts = [
   { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
 ];
 
-export const app = () => {
+export const App = () => {
   const savedContacts = localStorage.getItem('contacts');
   const [contacts, setContacts] = useState(
     savedContacts !== null ? JSON.parse(savedContacts) : initialContacts

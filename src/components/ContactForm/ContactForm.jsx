@@ -27,7 +27,7 @@ export const ContactForm = ({ addContact, contacts }) => {
     setName(e.target.value);
   };
 
-  handleNumberChange = e => {
+  const handleNumberChange = e => {
     setNumber(e.target.value);
   };
 
@@ -100,7 +100,7 @@ export const ContactForm = ({ addContact, contacts }) => {
   );
 };
 
-ContactForm.proptypes = {
+ContactForm.propTypes = {
   addContact: PropTypes.func.isRequired,
   contacts: PropTypes.arrayOf(
     PropTypes.shape({
