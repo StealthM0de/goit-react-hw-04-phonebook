@@ -3,22 +3,6 @@ import { nanoid } from 'nanoid';
 import css from './ContactForm.module.css';
 import PropTypes from 'prop-types';
 
-// export class ContactForm extends Component {
-//   static propTypes = {
-//     addContact: PropTypes.func.isRequired,
-//     contacts: PropTypes.arrayOf(
-//       PropTypes.shape({
-//         id: PropTypes.string.isRequired,
-//         name: PropTypes.string.isRequired,
-//         number: PropTypes.string.isRequired,
-//       })
-//     ),
-//   };
-
-//   state = {
-//     name: '',
-//     number: '',
-//   };
 export const ContactForm = ({ addContact, contacts }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -34,8 +18,6 @@ export const ContactForm = ({ addContact, contacts }) => {
   const handleSubmit = e => {
     // prevent the form refreshing when submitting
     e.preventDefault();
-    // const { name, number } = this.state;
-    // const { addContact, contacts } = this.props;
 
     // when name and number is empty, it will not submit(return)
     if (name.trim() === '' || number.trim() === '') {
@@ -90,7 +72,7 @@ export const ContactForm = ({ addContact, contacts }) => {
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
           value={number}
-          onChange={this.handleNumberChange}
+          onChange={handleNumberChange}
         />
       </label>
       <button className={css.formButton} type="submit">
